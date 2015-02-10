@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulseAudio.Client", "PulseAudio.Client\PulseAudio.Client.csproj", "{6ABF901B-2F40-422D-8E04-AA5527AFE08B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulseAudio.Mixer", "PulseAudio.Mixer\PulseAudio.Mixer.csproj", "{24E87A88-ACF3-4B28-9C67-872B6CDC883E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6ABF901B-2F40-422D-8E04-AA5527AFE08B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ABF901B-2F40-422D-8E04-AA5527AFE08B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ABF901B-2F40-422D-8E04-AA5527AFE08B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ABF901B-2F40-422D-8E04-AA5527AFE08B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24E87A88-ACF3-4B28-9C67-872B6CDC883E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24E87A88-ACF3-4B28-9C67-872B6CDC883E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24E87A88-ACF3-4B28-9C67-872B6CDC883E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24E87A88-ACF3-4B28-9C67-872B6CDC883E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

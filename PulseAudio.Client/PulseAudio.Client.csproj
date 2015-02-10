@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6ABF901B-2F40-422D-8E04-AA5527AFE08B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PulseAudio.Client</RootNamespace>
+    <AssemblyName>PulseAudio.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ffi\PaChannelMap.cs" />
+    <Compile Include="Ffi\PaControl.cs" />
+    <Compile Include="Ffi\PaCVolume.cs" />
+    <Compile Include="Ffi\PaError.cs" />
+    <Compile Include="Ffi\PaIntrospection.cs" />
+    <Compile Include="Ffi\PaOperation.cs" />
+    <Compile Include="Ffi\PaSampleSpec.cs" />
+    <Compile Include="Ffi\PaSinkInfo.cs" />
+    <Compile Include="Ffi\PaSinkInputInfo.cs" />
+    <Compile Include="Ffi\PaSubscription.cs" />
+    <Compile Include="Internal\Introspection\SingleUpdateable.cs" />
+    <Compile Include="Internal\Promise.cs" />
+    <Compile Include="Internal\Subscription\EventDictionary.cs" />
+    <Compile Include="Internal\Subscription\EventFacility.cs" />
+    <Compile Include="Internal\Subscription\EventType.cs" />
+    <Compile Include="Ffi\PaVolume.cs" />
+    <Compile Include="IContext.cs" />
+    <Compile Include="Ffi\PaContext.cs" />
+    <Compile Include="Ffi\PaCommon.cs" />
+    <Compile Include="Ffi\PaThreadedMainLoop.cs" />
+    <Compile Include="IIntrospection.cs" />
+    <Compile Include="Internal\Context.cs" />
+    <Compile Include="Internal\Control\SinkInputVolumeController.cs" />
+    <Compile Include="Internal\Control\DirectControl.cs" />
+    <Compile Include="Internal\Control\SinkVolumeController.cs" />
+    <Compile Include="Internal\Introspection\Introspection.cs" />
+    <Compile Include="Internal\Introspection\Sink.cs" />
+    <Compile Include="Internal\Introspection\SinkIntrospection.cs" />
+    <Compile Include="Internal\Introspection\SinkInputIntrospection.cs" />
+    <Compile Include="Internal\Introspection\SinkInput.cs" />
+    <Compile Include="Internal\Subscription\EventSubscription.cs" />
+    <Compile Include="Internal\Subscription\SubscriptionManager.cs" />
+    <Compile Include="Internal\TaskFactoryExtensions.cs" />
+    <Compile Include="Internal\UnconnectedContext.cs" />
+    <Compile Include="Internal\MainLoop.cs" />
+    <Compile Include="Internal\BaseResource.cs" />
+    <Compile Include="Internal\ManagedPtr.cs" />
+    <Compile Include="IDirectControl.cs" />
+    <Compile Include="Internal\Control\VolumeController.cs" />
+    <Compile Include="Internal\Volumes.cs" />
+    <Compile Include="ISink.cs" />
+    <Compile Include="ISinkInput.cs" />
+    <Compile Include="IUpdateable.cs" />
+    <Compile Include="IUpdateableList.cs" />
+    <Compile Include="IVolumeControllable.cs" />
+    <Compile Include="IVolumeController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pulse.cs" />
+    <Compile Include="PulseAudioException.cs" />
+    <Compile Include="SinkState.cs" />
+    <Compile Include="Volume.cs" />
+    <Compile Include="IVolumes.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
